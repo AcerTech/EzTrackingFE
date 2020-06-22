@@ -1,0 +1,54 @@
+
+.sidenav {
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+
+  background: #337ab7;
+  display: inline-block;
+  white-space: nowrap;
+  width: 200px;
+  transition: width .5s;
+}
+
+
+.sidenav:hover {
+  width: 200px !important;
+}
+
+
+.item:hover {
+  background-color: #222;
+} 
+
+.sidenav .fas {
+  margin: 15px;
+  width: 20px;
+  color: #fff;
+}
+
+i.fas {
+  font-size: 15px;
+  vertical-align: middle !important;
+}
+
+.item a{
+  color: #fff;
+  font-size: 15px
+}
+
+.item {
+  height: 50px;
+  overflow: hidden;
+  color: #fff;
+} 
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}

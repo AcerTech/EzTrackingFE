@@ -1,0 +1,160 @@
+<div>
+
+</div>
+<div class="sidenav" [ngStyle]="sideBarStyle" style="overflow-y: auto;" *ngIf="authServices.isLoggedIn">
+  <!--   -->
+  <!-- <div>
+    <a id="toggleBtn" (click)="doToggle()"  style="cursor: pointer;">
+      <i class="fas fa-fw fa-bars">
+        <i class="fas fa-angle-right" *ngIf="!toggle"></i>
+        <i class="fas fa-angle-left" *ngIf="toggle"></i>
+      </i>
+    </a>
+  </div> -->
+
+  <!-- advanceSearch -->
+  <div class="item">
+    <a [routerLink]="['/advanceSearch']" routerLinkActive="active">
+      <i class="fas fa-fw fa-th"></i>Advance Search
+    </a>
+  </div>
+
+  <!-- Dispatcher -->
+  <div *ngIf="authServices.roleMatch(['Admin','Dispatcher'])">
+
+    <div class="item" style="background-color:gray">
+      <a>
+        <i class="fas fa-fw fa-user-circle"></i>Dispatcher
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/agbolrequests']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>AG BOLs Requests
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/bolrequests']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>BOLs Requests
+      </a>
+    </div>
+
+
+    <div class="item">
+      <a [routerLink]="['/completedrequests']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Completed Requests
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/adddriver']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Add Driver
+      </a>
+    </div>
+
+    <!-- <div class="item">
+      <a [routerLink]="['/actions']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Actions
+      </a>
+    </div> -->
+
+  </div>
+  <!--End Dispatcher -->
+
+
+  <div>
+    <!-- user menu -->
+    <div class="item" style="background-color:gray">
+      <a>
+        <i class="fas fa-fw fa-user-circle"></i>My menu
+      </a>
+    </div>
+
+
+    <div class="item">
+      <a [routerLink]="['/addbol']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Create A BOL
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/savedbols']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>My Saved Bols
+      </a>
+    </div>
+    <div class="item">
+      <a [routerLink]="['/submittedbols']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>My Submitted Bol
+      </a>
+    </div>
+  </div><!-- End of user menu div -->
+
+
+  <div *ngIf="authServices.roleMatch(['Admin'])">
+    <!-- Admin menu -->
+
+    <div class="item" style="background-color:gray">
+      <a>
+        <i class="fas fa-fw fa-user-circle"></i>Admin menu
+      </a>
+    </div>
+
+
+    <div class="item">
+      <a [routerLink]="['/usersList']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Users List
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/roles']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Roles
+      </a>
+    </div>
+
+
+  </div><!-- End of Admin menu div -->
+
+
+  <!-- Manager -->
+  <div *ngIf="authServices.roleMatch(['Admin','Manager'])">
+
+    <div class="item" style="background-color:gray">
+      <a>
+        <i class="fas fa-fw fa-user-circle"></i>Manager menu
+      </a>
+    </div>
+
+    <div class="item">
+      <a [routerLink]="['/addBuilding']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Buildings
+      </a>
+    </div>
+    <div class="item">
+      <a [routerLink]="['/addContainer']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Conatiners
+      </a>
+    </div>
+    <div class="item">
+      <a [routerLink]="['/addCargo']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Cargos
+      </a>
+    </div>
+    <div class="item">
+      <a [routerLink]="['/addPbg']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>PBGs
+      </a>
+    </div>
+    <div class="item">
+      <a [routerLink]="['/addVehicle']" routerLinkActive="active">
+        <i class="fas fa-fw fa-th"></i>Vehicles
+      </a>
+    </div>
+
+  </div>
+
+
+
+</div>
+<!--End of sidenav div -->
